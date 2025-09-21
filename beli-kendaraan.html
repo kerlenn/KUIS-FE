@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembelian Asuransi Mobil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="detail-page">
+    <div class="container">
+      <form class="car-form" id="carForm">
+        <h2>Pembelian Produk Asuransi Mobil</h2>
+
+        <label>Merk Mobil</label>
+        <input type="text" id="merk" required>
+
+        <label>Jenis Mobil</label>
+        <input type="text" id="jenis" required>
+
+        <label>Tahun Pembuatan</label>
+        <input type="number" id="tahun" min="1990" max="2025" required>
+
+        <label>Harga Mobil (Rp)</label>
+        <input type="number" id="harga" required>
+
+        <label>Nomor Plat Mobil</label>
+        <input type="text" id="plat" required>
+
+        <label>Nomor Mesin</label>
+        <input type="text" id="mesin" required>
+
+        <label>Nomor Rangka</label>
+        <input type="text" id="rangka" required>
+
+        <label>Nama Pemilik</label>
+        <input type="text" id="pemilik" required>
+
+        <h3>Upload Foto Mobil</h3>
+        <label>Foto Tampak Depan</label>
+        <input type="file" id="fotoDepan" accept="image/*" required>
+        <label>Foto Tampak Belakang</label>
+        <input type="file" id="fotoBelakang" accept="image/*" required>
+        <label>Foto Tampak Kiri</label>
+        <input type="file" id="fotoKiri" accept="image/*" required>
+        <label>Foto Tampak Kanan</label>
+        <input type="file" id="fotoKanan" accept="image/*" required>
+        <label>Foto Dashboard</label>
+        <input type="file" id="fotoDashboard" accept="image/*" required>
+        <label>Foto Mesin</label>
+        <input type="file" id="fotoMesin" accept="image/*" required>
+
+        <button type="submit" class="btn">Hitung Premi</button>
+
+        <div id="carPremiumResult"></div>
+
+        <div id="carCheckoutSection" style="display: none;">
+          <a href="checkout.html" id="carCheckoutBtn">Checkout</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

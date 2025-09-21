@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Asuransi Jiwa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="brand">Kerlen - 535240109</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="logout.html" class="btn-outline">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-page">
+    <div class="card">
+      <h2>Checkout Pembayaran</h2>
+      <p>Silakan pilih metode pembayaran dan lakukan konfirmasi pembayaran premi.</p>
+
+      <!-- Harga Premi -->
+      <div class="form-msg" id="premiInfo">
+        Premi yang harus dibayarkan: <strong id="premiValue">Rp0</strong>
+      </div>
+
+      <!-- Metode Pembayaran -->
+      <label for="paymentMethod">Metode Pembayaran</label>
+      <select id="paymentMethod" required>
+        <option value="">-- Pilih Metode Pembayaran --</option>
+        <option value="transfer">Transfer Bank</option>
+        <option value="ewallet">E-Wallet (OVO, Dana, GoPay)</option>
+        <option value="creditcard">Kartu Kredit/Debit</option>
+      </select>
+
+      <div id="checkoutMessage" class="form-msg"></div>
+
+      <button id="payBtn" class="btn">Bayar</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 535240109/Kerlen Nina Mae. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -67,6 +67,20 @@ nav a.btn-outline:hover {
   color: var(--accent);
 }
 
+nav a.btn-asuransi {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 500;
+  background: #510909;
+}
+
+nav a.btn-asuransi:hover {
+  background: #ffffff;
+  color: var(--accent);
+}
+
 .btn {
   background: var(--accent);
   color: white;
@@ -301,7 +315,6 @@ input:focus {
 }
 
 .detail-list li::before {
-  content: "✔ ";
   color: var(--accent);
   font-weight: bold;
   margin-right: 6px;
@@ -329,3 +342,175 @@ select {
   font-weight: 500;
 }
 
+/* === Pembelian Asuransi Mobil Page === */
+.car-form {
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 6px 18px rgba(128, 0, 0, 0.15);
+}
+
+.car-form h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.car-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--accent-dark);
+}
+
+.car-form input[type="text"],
+.car-form input[type="number"],
+.car-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.car-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(128, 0, 0, 0.2);
+}
+
+.car-form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#carPremiumResult {
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#carCheckoutSection {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#carCheckoutBtn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#carCheckoutBtn:hover {
+  background: var(--accent-dark);
+}
+
+/* Responsive untuk form mobil */
+@media (max-width: 768px) {
+  .car-form {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+/* === Pembelian Asuransi Kesehatan Page === */
+.health-form {
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 6px 18px rgba(128, 0, 0, 0.15);
+}
+
+.health-form h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.health-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--accent-dark);
+}
+
+.health-form input[type="text"],
+.health-form input[type="date"],
+.health-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.health-form input:focus,
+.health-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(128, 0, 0, 0.2);
+}
+
+#healthPremiumResult {
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#healthCheckoutSection {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#healthCheckoutBtn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#healthCheckoutBtn:hover {
+  background: var(--accent-dark);
+}
+
+/* Table styling */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.history-table th {
+  background-color: #ff6f00;
+  color: white;
+}
+
+.history-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembelian Asuransi Kesehatan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="detail-page">
+    <div class="container">
+      <form class="health-form" id="healthForm">
+        <h2>Pembelian Produk Asuransi Kesehatan</h2>
+
+        <label>Nama Lengkap sesuai KTP</label>
+        <input type="text" id="namaKtp" required>
+
+        <label>Tanggal Lahir</label>
+        <input type="date" id="dobHealth" required>
+
+        <label>Pekerjaan</label>
+        <input type="text" id="pekerjaan" required>
+
+        <label>Merokok</label>
+        <select id="merokok" required>
+          <option value="">-- Pilih --</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+
+        <label>Riwayat Hipertensi</label>
+        <select id="hipertensi" required>
+          <option value="">-- Pilih --</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+
+        <label>Diabetes</label>
+        <select id="diabetes" required>
+          <option value="">-- Pilih --</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+
+        <button type="submit" class="btn">Hitung Premi</button>
+
+        <div id="healthPremiumResult"></div>
+
+        <div id="healthCheckoutSection" style="display:none;">
+          <a href="checkout.html" id="healthCheckoutBtn">Checkout</a>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -22,9 +22,14 @@ body {
 }
 
 .header {
-  background: var(--accent);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;      /* biar di atas elemen lain */
+  background: var(--accent); /* pastikan ada background supaya tidak transparan */
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* efek bayangan */
 }
 
 .header .container {

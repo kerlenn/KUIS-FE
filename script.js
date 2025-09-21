@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  // PURCHASE PAGE (ASURANSI JIWA)
+  // PEMBELIAN ASURANSI JIWA
   const purchaseForm = document.getElementById("purchaseForm");
   if (purchaseForm) {
     purchaseForm.addEventListener("submit", function (e) {

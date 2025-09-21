@@ -492,25 +492,36 @@ select {
   background: var(--accent-dark);
 }
 
-/* Table styling */
+/* === Histori Pembelian Page === */
 .history-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.1);
 }
 
 .history-table th,
 .history-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
+  padding: 12px 14px;
   text-align: center;
+  font-size: 14px;
 }
 
 .history-table th {
-  background-color: #ff6f00;
-  color: white;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
 }
 
 .history-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #fff5f5;
 }
+
+.history-table tr:hover {
+  background-color: #ffecec;
+  transition: background 0.2s ease;
+}
+

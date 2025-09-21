@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
       premiDisplay.style.color = "green";
       premiDisplay.textContent =
         `Data valid ✅ Premi bulanan yang harus dibayar: Rp${premi.toLocaleString("id-ID")}`;
-        
+
       const checkoutSection = document.getElementById("checkoutSection");
       if (checkoutSection) {
         checkoutSection.style.display = "block";
@@ -282,32 +282,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ========================
-  // CHECKOUT PAGE
-  // ========================
-  const payButton = document.getElementById("payButton");
-  if (payButton) {
-    payButton.addEventListener("click", function () {
-      const price = localStorage.getItem("selectedPrice") || "-";
-      const product = localStorage.getItem("selectedProduct") || "Asuransi";
-      const type = localStorage.getItem("selectedType") || "-";
 
-      // Simpan histori ke localStorage
-      const history = JSON.parse(localStorage.getItem("purchaseHistory")) || [];
-      const newRecord = {
-        product: product,
-        type: type,
-        date: new Date().toLocaleDateString("id-ID"),
-        price: "Rp" + price,
-        status: "Lunas",
-      };
-      history.push(newRecord);
-      localStorage.setItem("purchaseHistory", JSON.stringify(history));
+// CHECKOUT PAGE
+// ========================
+const payBtn = document.getElementById("payBtn");
+if (payBtn) {
+  payBtn.addEventListener("click", () => {
+    const paymentMethod = document.getElementById("paymentMethod").value;
+    const premiValue = document.getElementById("premiValue").textContent;
 
-      alert("Pembayaran berhasil! ✅");
-      window.location.href = "history.html";
+    if (!paymentMethod) {
+      const msg = document.getElementById("checkoutMessage");
+      msg.style.color = "#b91c1c";
+      msg.textContent = "Pilih metode pembayaran dulu!";
+      return;
+    }
+
+    // Ambil histori lama
+    const history = JSON.parse(localStorage.getItem("purchaseHistory")) || [];
+
+    // Ambil info produk yang sudah disimpan sebelumnya (dari halaman form)
+    const product = localStorage.getItem("selectedProduct") || "Asuransi";
+    const type = localStorage.getItem("selectedType") || "-";
+
+    // Simpan transaksi baru
+    history.push({
+      product: product,
+      type: type,
+      date: new Date().toLocaleDateString("id-ID"),
+      price: premiValue,
+      status: "Lunas"
     });
-  }
+
+    localStorage.setItem("purchaseHistory", JSON.stringify(history));
+
+    alert("Pembayaran berhasil ✅");
+    window.location.href = "histori.html";
+  });
+}
+
+// ========================
+// LOAD PREMI DI CHECKOUT PAGE
+// ========================
+const premiValueElement = document.getElementById("premiValue");
+if (premiValueElement) {
+  const price = localStorage.getItem("selectedPrice") || "Rp0";
+  premiValueElement.textContent = price;
+}
+
+
 
   // ========================
   // HISTORY PAGE

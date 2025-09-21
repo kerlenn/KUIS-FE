@@ -24,7 +24,7 @@ body {
 .header {
   background: var(--accent);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 14px 0;
+  padding: 10px 0;
 }
 
 .header .container {
@@ -40,6 +40,12 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 nav a {
@@ -161,7 +167,7 @@ input:focus {
   border-bottom: 1px solid #f1c0c0;
 }
 
-.hero h2 {
+.hero h1 {
   font-size: 28px;
   margin-bottom: 12px;
   color: var(--accent-dark);
@@ -249,7 +255,16 @@ input:focus {
   }
 
   nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 10px;
+  }
+
+  nav a {
+    margin: 4px;
+    flex: 1 1 auto;
+    text-align: center;
   }
 
   .product-grid {
@@ -326,7 +341,7 @@ input:focus {
   text-decoration: none;
 }
 
-/* === Pembelian Produk Page === */
+/* Pembelian Asuransi */
 select {
   width: 100%;
   padding: 10px;
@@ -342,7 +357,7 @@ select {
   font-weight: 500;
 }
 
-/* === Pembelian Asuransi Mobil Page === */
+/* Pembelian Asuransi Mobil */
 .car-form {
   background: var(--card);
   padding: 28px;
@@ -423,7 +438,7 @@ select {
   }
 }
 
-/* === Pembelian Asuransi Kesehatan Page === */
+/* Pembelian Asuransi Kesehatan */
 .health-form {
   background: var(--card);
   padding: 28px;
@@ -492,11 +507,11 @@ select {
   background: var(--accent-dark);
 }
 
-/* === Histori Pembelian Page === */
+/* Histori Pembelian */
 .history-table {
-  width: 100%;
+  width: 95%;           
+  margin: 20px auto; 
   border-collapse: collapse;
-  margin-top: 20px;
   background: var(--card);
   border-radius: var(--radius);
   overflow: hidden;
@@ -525,3 +540,8 @@ select {
   transition: background 0.2s ease;
 }
 
+.history-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+}

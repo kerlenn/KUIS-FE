@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ========================
+
   // LOGIN PAGE
-  // ========================
   const loginForm = document.getElementById("loginForm");
   if (loginForm) {
     loginForm.addEventListener("submit", function (e) {
@@ -36,9 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ========================
+
   // SIGN UP PAGE
-  // ========================
   const signupForm = document.getElementById("signupForm");
   if (signupForm) {
     signupForm.addEventListener("submit", function (e) {
@@ -95,9 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ========================
+
   // PURCHASE PAGE (ASURANSI JIWA)
-  // ========================
   const purchaseForm = document.getElementById("purchaseForm");
   if (purchaseForm) {
     purchaseForm.addEventListener("submit", function (e) {
@@ -152,9 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ========================
-  // PURCHASE PAGE (ASURANSI MOBIL)
-  // ========================
+
+  // PEMBELIAN ASURANSI MOBIL
   const carForm = document.getElementById("carForm");
   if (carForm) {
     carForm.addEventListener("submit", function (e) {
@@ -198,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
       premiDisplay.textContent =
         `Premi tahunan untuk mobil ${merk} ${jenis} adalah: Rp${premi.toLocaleString("id-ID")}`;
 
-      // ✅ tampilkan tombol checkout
+      // tampilkan tombol checkout
       const checkoutSection = document.getElementById("carCheckoutSection");
       checkoutSection.style.display = "block";
 
@@ -213,9 +209,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ========================
-  // PURCHASE PAGE (ASURANSI KESEHATAN)
-  // ========================
+
+  // PEMBELIAN ASURANSI KESEHATAN
   const healthForm = document.getElementById("healthForm");
   if (healthForm) {
     healthForm.addEventListener("submit", function (e) {
@@ -284,7 +279,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // CHECKOUT PAGE
-// ========================
 const payBtn = document.getElementById("payBtn");
 if (payBtn) {
   payBtn.addEventListener("click", () => {
@@ -321,9 +315,8 @@ if (payBtn) {
   });
 }
 
-// ========================
+
 // LOAD PREMI DI CHECKOUT PAGE
-// ========================
 const premiValueElement = document.getElementById("premiValue");
 if (premiValueElement) {
   const price = localStorage.getItem("selectedPrice") || "Rp0";
@@ -331,10 +324,7 @@ if (premiValueElement) {
 }
 
 
-
-  // ========================
   // HISTORY PAGE
-  // ========================
   const historyList = document.getElementById("historyList");
   if (historyList) {
     const history = JSON.parse(localStorage.getItem("purchaseHistory")) || [];
